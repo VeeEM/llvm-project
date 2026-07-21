@@ -99,6 +99,8 @@ getEmissionKind(llvm::codegenoptions::DebugInfoKind kind) {
     return mlir::LLVM::DIEmissionKind::Full;
   case llvm::codegenoptions::DebugInfoKind::DebugLineTablesOnly:
     return mlir::LLVM::DIEmissionKind::LineTablesOnly;
+  case llvm::codegenoptions::DebugInfoKind::DebugDirectivesOnly:
+    return mlir::LLVM::DIEmissionKind::DebugDirectivesOnly;
   default:
     return mlir::LLVM::DIEmissionKind::None;
   }

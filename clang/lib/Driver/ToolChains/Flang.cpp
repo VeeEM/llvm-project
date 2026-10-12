@@ -258,6 +258,9 @@ void Flang::addDebugOptions(const llvm::opt::ArgList &Args, const JobAction &JA,
   } else {
     DebugInfoKind = llvm::codegenoptions::NoDebugInfo;
   }
+
+  TC.adjustDebugInfoKind(DebugInfoKind, Args);
+
   addDebugInfoKind(CmdArgs, DebugInfoKind);
   // Pass on the DWARF version when debug information is being generated, or
   // when -gdwarf-N names a version. Leaving it out means the version stays

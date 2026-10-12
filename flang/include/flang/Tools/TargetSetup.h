@@ -48,6 +48,7 @@ namespace Fortran::tools {
   switch (targetTriple.getArch()) {
   case llvm::Triple::ArchType::amdgpu:
   case llvm::Triple::ArchType::x86_64:
+  case llvm::Triple::ArchType::nvptx64:
     break;
   default:
     targetCharacteristics.DisableType(
